@@ -101,7 +101,8 @@ fabric.properties
 # Go workspace file
 go.work
 go.work.sum
-
+db/
+/db/
 # env file
 .env
 

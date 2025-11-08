@@ -33,7 +33,6 @@ func InitializeSQLite() (*gorm.DB, error) {
 		}
 		logger.Infof("db file created")
 	}
-	logger.Infof("db file does not exist, creating new one")
 	// Create db and connect
 	db, err := gorm.Open(sqlite.Open(dbFullPath), &gorm.Config{})
 	if err != nil {

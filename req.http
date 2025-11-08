@@ -5,8 +5,18 @@ GET https://examples.http-client.intellij.net/get
 ### GET request to local server
 GET http://localhost:8080/api/v1/opening
 
-### POST request to local server
+### POST request opening
 POST http://localhost:8080/api/v1/opening
+Content-Type: application/json
+
+{
+  "role": "Senior Software Engineer",
+  "company": "Tech Innovators Inc.",
+  "location": "Londrina, PR",
+  "remote": true,
+  "link": "https://techinnovators.example.com/careers/12345",
+  "salary": 30000,
+}
 
 ###
 DELETE http://localhost:8080/api/v1/opening

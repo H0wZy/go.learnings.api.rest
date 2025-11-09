@@ -37,3 +37,9 @@ type CreateOpeningResponse struct {
 	Success bool                    `json:"success"`
 	Data    schemas.OpeningResponse `json:"data"`
 }
+
+type DeleteOpeningResponse struct {
+	Message string                  `json:"message"`
+	Success bool                    `json:"success"`
+	Data    schemas.OpeningResponse `json:"data"`
+}

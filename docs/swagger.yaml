@@ -24,6 +24,15 @@ definitions:
       success:
         type: boolean
     type: object
+  handler.DeleteOpeningResponse:
+    properties:
+      data:
+        $ref: '#/definitions/schemas.OpeningResponse'
+      message:
+        type: string
+      success:
+        type: boolean
+    type: object
   handler.ErrorResponse:
     properties:
       message:
@@ -71,6 +80,34 @@ info:
   version: "1.0"
 paths:
   /opening:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a job opening
+      parameters:
+      - description: Opening identification
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.DeleteOpeningResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: DeleteOpeningHandler
+      tags:
+      - Openings
     post:
       consumes:
       - application/json
@@ -97,6 +134,7 @@ paths:
           description: Internal Server Error
           schema:
             $ref: '#/definitions/handler.ErrorResponse'
+      summary: CreateOpeningHandler
       tags:
       - Openings
 swagger: "2.0"

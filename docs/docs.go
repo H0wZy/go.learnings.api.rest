@@ -36,6 +36,7 @@ const docTemplate = `{
                 "tags": [
                     "Openings"
                 ],
+                "summary": "CreateOpeningHandler",
                 "parameters": [
                     {
                         "description": "Request body",
@@ -52,6 +53,48 @@ const docTemplate = `{
                         "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/handler.CreateOpeningResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.ErrorResponse"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete a job opening",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Openings"
+                ],
+                "summary": "DeleteOpeningHandler",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Opening identification",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.DeleteOpeningResponse"
                         }
                     },
                     "400": {
@@ -95,6 +138,20 @@ const docTemplate = `{
             }
         },
         "handler.CreateOpeningResponse": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "$ref": "#/definitions/schemas.OpeningResponse"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "handler.DeleteOpeningResponse": {
             "type": "object",
             "properties": {
                 "data": {

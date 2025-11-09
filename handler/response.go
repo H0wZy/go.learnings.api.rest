@@ -48,3 +48,9 @@ type ShowOpeningResponse struct {
 	Success bool                    `json:"success"`
 	Data    schemas.OpeningResponse `json:"data"`
 }
+
+type ListOpeningsResponse struct {
+	Message string                    `json:"message"`
+	Success bool                      `json:"success"`
+	Data    []schemas.OpeningResponse `json:"data"`
+}

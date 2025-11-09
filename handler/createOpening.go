@@ -7,7 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// CreateOpeningHandler @Summary Create opening
+// CreateOpeningHandler
+// @Summary CreateOpeningHandler
 // @Description Create a new job opening
 // @Tags Openings
 // @Accept json

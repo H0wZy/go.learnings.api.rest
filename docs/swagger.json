@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
         "description": "This is a sample server for a job openings management API.",
-        "title": "go.learnings.restapi by h0wzy",
+        "title": "go.learnings.api.rest by h0wzy",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
             "name": "API Support",

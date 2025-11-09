@@ -3,7 +3,7 @@ package handler
 import (
 	"net/http"
 
-	"github.com/H0wZy/go.learnings.restapi/schemas"
+	"github.com/H0wZy/go.learnings.api.rest/schemas"
 	"github.com/gin-gonic/gin"
 )
 

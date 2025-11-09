@@ -1,4 +1,4 @@
-module github.com/H0wZy/go.learnings.restapi
+module github.com/H0wZy/go.learnings.api.rest
 
 go 1.25.3
 

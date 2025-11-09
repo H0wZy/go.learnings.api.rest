@@ -1,6 +1,6 @@
 package main
 
-// @title go.learnings.restapi by h0wzy
+// @title go.learnings.api.rest by h0wzy
 // @version 1.0
 // @description This is a sample server for a job openings management API.
 // @termsOfService http://swagger.io/terms/
@@ -16,9 +16,9 @@ package main
 // @BasePath /api/v1
 
 import (
-	"github.com/H0wZy/go.learnings.restapi/config"
-	_ "github.com/H0wZy/go.learnings.restapi/docs"
-	"github.com/H0wZy/go.learnings.restapi/router"
+	"github.com/H0wZy/go.learnings.api.rest/config"
+	_ "github.com/H0wZy/go.learnings.api.rest/docs"
+	"github.com/H0wZy/go.learnings.api.rest/router"
 )
 
 var (

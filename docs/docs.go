@@ -425,7 +425,7 @@ var SwaggerInfo = &swag.Spec{
 	Host:             "localhost:8080",
 	BasePath:         "/api/v1",
 	Schemes:          []string{},
-	Title:            "go.learnings.restapi by h0wzy",
+	Title:            "go.learnings.api.rest by h0wzy",
 	Description:      "This is a sample server for a job openings management API.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,

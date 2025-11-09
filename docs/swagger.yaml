@@ -120,7 +120,7 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: http://swagger.io/terms/
-  title: go.learnings.restapi by h0wzy
+  title: go.learnings.api.rest by h0wzy
   version: "1.0"
 paths:
   /opening:

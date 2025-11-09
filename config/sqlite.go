@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	"github.com/H0wZy/go.learnings.restapi/schemas"
+	"github.com/H0wZy/go.learnings.api.rest/schemas"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )

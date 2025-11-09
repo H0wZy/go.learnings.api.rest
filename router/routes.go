@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/H0wZy/go.learnings.restapi/docs"
-	"github.com/H0wZy/go.learnings.restapi/handler"
+	"github.com/H0wZy/go.learnings.api.rest/docs"
+	"github.com/H0wZy/go.learnings.api.rest/handler"
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"

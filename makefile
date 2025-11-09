@@ -1,6 +1,6 @@
 .PHONY:	default run build test docs cls
 
-APP_NAME=go.learnings.restapi
+APP_NAME=go.learnings.api.rest
 
 default: runwdocs
 run:

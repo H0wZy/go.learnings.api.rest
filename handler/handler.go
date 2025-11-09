@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/H0wZy/go.learnings.restapi/config"
+	"github.com/H0wZy/go.learnings.api.rest/config"
 	"gorm.io/gorm"
 )
 

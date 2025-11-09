@@ -1,13 +1,19 @@
 package router
 
 import (
+	"github.com/H0wZy/go.learnings.restapi/docs"
 	"github.com/H0wZy/go.learnings.restapi/handler"
 	"github.com/gin-gonic/gin"
+	swaggerfiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func initializeRoutes(router *gin.Engine) {
 	handler.InitializeHandler()
-	v1 := router.Group("/api/v1")
+
+	basePath := "/api/v1"
+	docs.SwaggerInfo.BasePath = basePath
+	v1 := router.Group(basePath)
 	{
 		v1.POST("/opening", handler.CreateOpeningHandler)
 		v1.GET("/opening", handler.ShowOpeningHandler)
@@ -15,4 +21,7 @@ func initializeRoutes(router *gin.Engine) {
 		v1.PATCH("/opening", handler.UpdateOpeningHandler)
 		v1.GET("/openings", handler.ListOpeningsHandler)
 	}
+
+	// init swagger
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 }

@@ -7,13 +7,24 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// CreateOpeningHandler @Summary Create opening
+// @Description Create a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Success 200 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
 func CreateOpeningHandler(ctx *gin.Context) {
 
 	request := CreateOpeningRequest{}
 
-	_ = ctx.BindJSON(&request)
-
-	if err := request.Validate(); err != nil {
+	if err := ctx.BindJSON(&request); err != nil {
+		responseError(ctx, http.StatusBadRequest, false, "malformed request JSON")
+		return
+	} else if err := request.Validate(); err != nil {
 		logger.Errorf("error validating request: %v", err.Error())
 		responseError(ctx, http.StatusBadRequest, false, err.Error())
 		return
